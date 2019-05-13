@@ -1,0 +1,1156 @@
+<robot
+  name="lizard_description">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="1">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="1"
+    type="fixed">
+    <origin
+      xyz="0.0057147 -0.015881 0.010167"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="2">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="2"
+    type="fixed">
+    <origin
+      xyz="-0.079285 -0.028381 0.027167"
+      rpy="-6.123E-17 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="3">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="3"
+    type="fixed">
+    <origin
+      xyz="-0.079285 -0.028381 0.027167"
+      rpy="-6.123E-17 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="3" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="4">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="4"
+    type="fixed">
+    <origin
+      xyz="0.0057147 0.052619 0.027167"
+      rpy="6.123E-17 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="4" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="5">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="5"
+    type="fixed">
+    <origin
+      xyz="0.0057147 0.052619 0.027167"
+      rpy="6.123E-17 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="5" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="6">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="6"
+    type="fixed">
+    <origin
+      xyz="-0.077041 -0.010601 0.024667"
+      rpy="1.5708 2.6798E-17 -1.6342" />
+    <parent
+      link="base_link" />
+    <child
+      link="6" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="7">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="7"
+    type="fixed">
+    <origin
+      xyz="0.0048541 -0.033071 0.024667"
+      rpy="1.5708 6.1135E-17 1.6266" />
+    <parent
+      link="base_link" />
+    <child
+      link="7" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="8">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/8.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/8.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="8"
+    type="fixed">
+    <origin
+      xyz="-0.077326 0.034219 0.037167"
+      rpy="-1.5708 6.1183E-17 1.61" />
+    <parent
+      link="base_link" />
+    <child
+      link="8" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="9">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/9.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/9.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="9"
+    type="fixed">
+    <origin
+      xyz="0.0057523 0.05754 0.037167"
+      rpy="-1.5708 -7.2504E-17 -1.7078" />
+    <parent
+      link="base_link" />
+    <child
+      link="9" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="10">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/10.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/10.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="10"
+    type="fixed">
+    <origin
+      xyz="0.010639 0.078336 -0.010301"
+      rpy="6.3976E-16 -0.98198 -1.7078" />
+    <parent
+      link="base_link" />
+    <child
+      link="10" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="11">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/11.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/11.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="11"
+    type="fixed">
+    <origin
+      xyz="-0.081192 0.081692 0.0027881"
+      rpy="-3.1416 -0.60629 -1.5315" />
+    <parent
+      link="base_link" />
+    <child
+      link="11" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="12">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/12.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/12.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="12"
+    type="fixed">
+    <origin
+      xyz="-0.089435 -0.048003 -0.0081847"
+      rpy="3.1416 -0.88635 1.5074" />
+    <parent
+      link="base_link" />
+    <child
+      link="12" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="13">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/13.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/13.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="13"
+    type="fixed">
+    <origin
+      xyz="0.016739 -0.066522 0.0013174"
+      rpy="-3.4328E-16 -0.62455 1.6266" />
+    <parent
+      link="base_link" />
+    <child
+      link="13" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="14">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/14.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/14.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="14"
+    type="fixed">
+    <origin
+      xyz="0.013065 0.095936 -0.0297"
+      rpy="-2.5528 -2.0265E-16 -0.13702" />
+    <parent
+      link="base_link" />
+    <child
+      link="14" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="15">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/15.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/15.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="15"
+    type="fixed">
+    <origin
+      xyz="-0.089435 -0.048003 -0.0081847"
+      rpy="-2.1771 3.32E-16 0.039249" />
+    <parent
+      link="base_link" />
+    <child
+      link="15" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="16">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/16.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/16.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="16"
+    type="fixed">
+    <origin
+      xyz="-0.067519 -0.06897 -0.0258"
+      rpy="-2.4571 3.9996E-12 3.0782" />
+    <parent
+      link="base_link" />
+    <child
+      link="16" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="17">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/17.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/17.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="17"
+    type="fixed">
+    <origin
+      xyz="0.033223 -0.089068 -0.010641"
+      rpy="-2.1953 -2.7056E-16 -3.0858" />
+    <parent
+      link="base_link" />
+    <child
+      link="17" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="18">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/18.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/18.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="18"
+    type="fixed">
+    <origin
+      xyz="-0.029937 0.10253 -0.041286"
+      rpy="2.1596 -3.4143E-16 -0.13702" />
+    <parent
+      link="base_link" />
+    <child
+      link="18" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="19">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/19.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/19.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="19"
+    type="fixed">
+    <origin
+      xyz="-0.12387 0.092014 -0.0431"
+      rpy="2.4365 -0.49665 0.42451" />
+    <parent
+      link="base_link" />
+    <child
+      link="19" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="20">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/20.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/20.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="20"
+    type="fixed">
+    <origin
+      xyz="-0.022929 -0.096883 -0.021264"
+      rpy="0.62455 1.075E-16 0.055826" />
+    <parent
+      link="base_link" />
+    <child
+      link="20" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="21">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/21.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizard_description/meshes/21.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="21"
+    type="fixed">
+    <origin
+      xyz="-0.123544656514328 0.0838025783465305 -0.0374020973035164"
+      rpy="0.886351557055973 4.95721882550598E-16 -0.0633848876266759" />
+    <parent
+      link="base_link" />
+    <child
+      link="21" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
