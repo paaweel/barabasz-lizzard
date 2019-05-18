@@ -1,5 +1,5 @@
 <package>
-  <name>model_export</name>
+  <name>lizard_description</name>
   <version>1.0.0</version>
   <description>
     <p>URDF Description package for model_export</p>
@@ -7,7 +7,7 @@
 for model_export robot</p>
   </description>
   <author>me</author>
-  <maintainer email="me2email.com" />
+  <maintainer email="22177988+paaweel@users.noreply.github.com" />
   <license>BSD</license>
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>roslaunch</build_depend>
