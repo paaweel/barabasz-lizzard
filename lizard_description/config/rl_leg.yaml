@@ -1,0 +1,5 @@
+type: "position_controllers/JointGroupPositionController"
+joints:
+ - RLplateJnt
+ - RLstArmJnt
+ - RLndArmJnt

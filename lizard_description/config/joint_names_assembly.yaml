@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'FRplateJnt', 'FRstArmJnt', 'FRndArmJnt', 'FLplateJnt', 'FLstArmJnt', 'FLndArmJnt', 'RRplateJnt', 'RRstArmJnt', 'RRndArmJnt', 'RLplateJnt', 'RLstArmJnt', 'RLndArmJnt', ]

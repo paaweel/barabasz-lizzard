@@ -1,6 +1,8 @@
 <launch>
   <include
     file="$(find gazebo_ros)/launch/empty_world.launch" />
+  <param name="robot_description" command="cat $(find lizard_description)/urdf/lizard_description.urdf" />
+
   <node
     name="tf_footprint_base"
     pkg="tf"
@@ -17,4 +19,32 @@
     pkg="rostopic"
     type="rostopic"
     args="pub /calibrated std_msgs/Bool true" />
+   <node pkg="robot_state_publisher" type="robot_state_publisher"  name="robot_state_publisher">
+    <param name="publish_frequency" type="double" value="30.0" />
+   </node>
+
+   <rosparam command="load"
+             file="$(find lizard_description)/config/fr_leg.yaml"
+             ns="lizard_fr_leg_controller" />
+
+   <rosparam command="load"
+             file="$(find lizard_description)/config/fl_leg.yaml"
+             ns="lizard_fl_leg_controller" />
+
+   <rosparam command="load"
+             file="$(find lizard_description)/config/rr_leg.yaml"
+             ns="lizard_rr_leg_controller" />
+
+   <rosparam command="load"
+             file="$(find lizard_description)/config/rl_leg.yaml"
+             ns="lizard_rl_leg_controller" />
+
+
+   <node name="lizard_controller_spawner" pkg="controller_manager" type="spawner"
+     args="lizard_fr_leg_controller
+            lizard_fl_leg_controller
+            lizard_rr_leg_controller
+            lizard_rl_leg_controller
+            --shutdown-timeout 3"/>
+
 </launch>
