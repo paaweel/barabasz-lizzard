@@ -14,42 +14,31 @@ def talk():
 
     state = 0
     while not rospy.is_shutdown():
+        #stand up
         if state == 0:
-            # stand up
-            posDelta = [0, 0.1, 0];
+            posDelta = [0.1, 0, 0];
             array = list(map(operator.add, array, posDelta))
             msg = Float64MultiArray(data=array)
-            if (array[1] < 2.3):
+            if (array[0] < 1.5):
                 print msg
-                pub_fr.publish(msg)
                 pub_fl.publish(msg)
                 pub_rr.publish(msg)
             else:
                 state = 1
+                array = [0, 0, 0]
+                posDel = [0.05, 0, 0]
+                rate = rospy.Rate(65)
+
         # lower rl leg
         elif state == 1:
-            posDelta = [0, -0.1, 0];
-            array = list(map(operator.add, array, posDelta))
-            if (array[1] < 1.5):
-                pub_rl.publish(msg)
-            else:
-                state = 2
-        # rise fr leg
-        elif state == 2:
-            posDelta = [0, -0.1, 0];
-            array = list(map(operator.add, array, posDelta))
-            if (array[1] < 3.5):
-                pub_fr.publish(msg)
-            else:
-                state = 3
-        # wave leg
-        elif state == 3:
-            posDelta = [0, 0, 0.1];
-            array = list(map(operator.add, array, posDelta))
+            array = list(map(operator.add, array, posDel))
+            msg = Float64MultiArray(data=array)
             pub_fr.publish(msg)
-            if (abs(array[2]) > 0.45):
-                posDelta[2] = posDelta[2] *(-1)
-
+            print msg
+            if array[0] > 0.8:
+                posDel[0] = -0.05
+            elif array[0] < 0:
+                posDel[0] = 0.05
         rate.sleep()
 
 if __name__ == '__main__':
