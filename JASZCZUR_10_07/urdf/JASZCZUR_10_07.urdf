@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com)
+     Commit Version: 1.5.0-0-g9aa0fdb  Build Version: 1.5.7004.21443
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="JASZCZUR_10_07">
+  <link
+    name="MainBoard">
+    <inertial>
+      <origin
+        xyz="0.0318708943804719 0.023913899686553 -0.00595908163167723"
+        rpy="0 0 0" />
+      <mass
+        value="0.227454615671169" />
+      <inertia
+        ixx="0.000136525777773456"
+        ixy="3.12863888453759E-07"
+        ixz="1.90573445048021E-08"
+        iyy="4.68216222434367E-05"
+        iyz="-2.83843165485194E-06"
+        izz="0.000174561924229273" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://JASZCZUR_10_07/meshes/MainBoard.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.92156862745098 0.92156862745098 0.92156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://JASZCZUR_10_07/meshes/MainBoard.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="FRndServoLink">
+    <inertial>
+      <origin
+        xyz="0.00980168628095077 0.00502207558822694 0.00196275745174633"
+        rpy="0 0 0" />
+      <mass
+        value="0.00898215937174241" />
+      <inertia
+        ixx="5.02863358905766E-07"
+        ixy="4.1867498994215E-10"
+        ixz="3.94795319133528E-11"
+        iyy="3.74381833099219E-07"
+        iyz="-1.31121128197788E-07"
+        izz="3.05060716060262E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://JASZCZUR_10_07/meshes/FRndServoLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://JASZCZUR_10_07/meshes/FRndServoLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRndServoJnt"
+    type="continuous">
+    <origin
+      xyz="0.0615 0.087 -0.016"
+      rpy="3.1416 0 1.5708" />
+    <parent
+      link="MainBoard" />
+    <child
+      link="FRndServoLink" />
+    <axis
+      xyz="-1 0 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="FRstArmLink">
+    <inertial>
+      <origin
+        xyz="-0.0500875871691268 0.00194912578757789 0.000253934421777263"
+        rpy="0 0 0" />
+      <mass
+        value="0.0107279118339416" />
+      <inertia
+        ixx="4.12846704724883E-07"
+        ixy="-3.43056520530813E-12"
+        ixz="7.44936775104867E-12"
+        iyy="1.46713624904103E-06"
+        iyz="-9.74334413202601E-09"
+        izz="1.19624826531191E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://JASZCZUR_10_07/meshes/FRstArmLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.92156862745098 0.92156862745098 0.92156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://JASZCZUR_10_07/meshes/FRstArmLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRstArmJnt"
+    type="continuous">
+    <origin
+      xyz="0.01165 0.012199 -0.010432"
+      rpy="-1.5708 0.87266 -1.5708" />
+    <parent
+      link="FRndServoLink" />
+    <child
+      link="FRstArmLink" />
+    <axis
+      xyz="0 -1 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="FRndArmLink">
+    <inertial>
+      <origin
+        xyz="2.22044604925031E-16 0.00399999999999981 0.0271089217366484"
+        rpy="0 0 0" />
+      <mass
+        value="0.0036829203673205" />
+      <inertia
+        ixx="1.060682058846E-06"
+        ixy="-2.61078880837049E-23"
+        ixz="-3.15646547974623E-21"
+        iyy="1.0612743799609E-06"
+        iyz="-1.68132721636094E-22"
+        izz="3.98768050329809E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://JASZCZUR_10_07/meshes/FRndArmLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.92156862745098 0.92156862745098 0.92156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://JASZCZUR_10_07/meshes/FRndArmLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRndArmJnt"
+    type="continuous">
+    <origin
+      xyz="-0.0621 0.01505 0.00515"
+      rpy="1.6427 -1.5708 -1.6427" />
+    <parent
+      link="FRstArmLink" />
+    <child
+      link="FRndArmLink" />
+    <axis
+      xyz="0 -1 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="FLndServoLink">
+    <inertial>
+      <origin
+        xyz="0.0050221 0.0098014 0.0019628"
+        rpy="0 0 0" />
+      <mass
+        value="0.0089822" />
+      <inertia
+        ixx="3.7438E-07"
+        ixy="4.0384E-10"
+        ixz="-1.3112E-07"
+        iyy="5.0286E-07"
+        iyz="3.2481E-11"
+        izz="3.0506E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://JASZCZUR_10_07/meshes/FLndServoLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.94902 0.9098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://JASZCZUR_10_07/meshes/FLndServoLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLndServoJnt"
+    type="continuous">
+    <origin
+      xyz="0.0025 0.087 -0.016"
+      rpy="-3.1416 0 3.1416" />
+    <parent
+      link="MainBoard" />
+    <child
+      link="FLndServoLink" />
+    <axis
+      xyz="0 -1 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="FLstArmLink">
+    <inertial>
+      <origin
+        xyz="-0.0500875872307532 0.00194912586046352 0.000253934457508431"
+        rpy="0 0 0" />
+      <mass
+        value="0.0107279119252347" />
+      <inertia
+        ixx="4.12846706539516E-07"
+        ixy="-3.4316328345475E-12"
+        ixz="7.44762988494872E-12"
+        iyy="1.46713625236567E-06"
+        iyz="-9.74334495191596E-09"
+        izz="1.19624826786885E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://JASZCZUR_10_07/meshes/FLstArmLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.92156862745098 0.92156862745098 0.92156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://JASZCZUR_10_07/meshes/FLstArmLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLstArmJnt"
+    type="continuous">
+    <origin
+      xyz="0.012199 0.01165 -0.010432"
+      rpy="-1.5708 0.87266 3.1416" />
+    <parent
+      link="FLndServoLink" />
+    <child
+      link="FLstArmLink" />
+    <axis
+      xyz="0 -1 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="FLndArmLink">
+    <inertial>
+      <origin
+        xyz="0 0.00399999999999997 0.0271089217366484"
+        rpy="0 0 0" />
+      <mass
+        value="0.00368292036732051" />
+      <inertia
+        ixx="1.06068205884601E-06"
+        ixy="-2.27474668452083E-23"
+        ixz="-2.5127792148929E-22"
+        iyy="1.0612743799609E-06"
+        iyz="1.79587457327763E-21"
+        izz="3.98768050329804E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://JASZCZUR_10_07/meshes/FLndArmLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.92156862745098 0.92156862745098 0.92156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://JASZCZUR_10_07/meshes/FLndArmLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLndArmJnt"
+    type="continuous">
+    <origin
+      xyz="-0.0621 0.01505 0.00515"
+      rpy="-1.9544 -1.5708 1.9544" />
+    <parent
+      link="FLstArmLink" />
+    <child
+      link="FLndArmLink" />
+    <axis
+      xyz="0 -1 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="RLndServoLink">
+    <inertial>
+      <origin
+        xyz="0.00502207563121094 0.00980168635904874 -0.00196275734735713"
+        rpy="0 0 0" />
+      <mass
+        value="0.0089821594835975" />
+      <inertia
+        ixx="3.74381837395238E-07"
+        ixy="4.18675619504707E-10"
+        ixz="1.311211286574E-07"
+        iyy="5.0286336077878E-07"
+        iyz="-3.94816041911556E-11"
+        izz="3.05060718753469E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://JASZCZUR_10_07/meshes/RLndServoLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.949019607843137 0.909803921568627 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://JASZCZUR_10_07/meshes/RLndServoLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RLndServoJnt"
+    type="continuous">
+    <origin
+      xyz="0.00249999999999984 -0.00799999999999976 -0.016"
+      rpy="0 0 -3.14159265358979" />
+    <parent
+      link="MainBoard" />
+    <child
+      link="RLndServoLink" />
+    <axis
+      xyz="0 -1 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="RLstArmLink">
+    <inertial>
+      <origin
+        xyz="-0.0500875871887852 0.00194912580032853 0.000253934434909332"
+        rpy="0 0 0" />
+      <mass
+        value="0.0107279118502789" />
+      <inertia
+        ixx="4.12846705905815E-07"
+        ixy="-3.4305322531194E-12"
+        ixz="7.44950999545174E-12"
+        iyy="1.46713625013441E-06"
+        iyz="-9.74334443894416E-09"
+        izz="1.19624826539149E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://JASZCZUR_10_07/meshes/RLstArmLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.92156862745098 0.92156862745098 0.92156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://JASZCZUR_10_07/meshes/RLstArmLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RLstArmJnt"
+    type="continuous">
+    <origin
+      xyz="0.012199 0.01165 0.010432"
+      rpy="1.5708 -0.87266 3.1416" />
+    <parent
+      link="RLndServoLink" />
+    <child
+      link="RLstArmLink" />
+    <axis
+      xyz="0 -1 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="RLndArmLink">
+    <inertial>
+      <origin
+        xyz="1.04083408558608E-17 0.0039999999999999 0.0271089217366484"
+        rpy="0 0 0" />
+      <mass
+        value="0.00368292036732051" />
+      <inertia
+        ixx="1.06068205884601E-06"
+        ixy="-8.01331218410746E-24"
+        ixz="-4.74262065502718E-22"
+        iyy="1.0612743799609E-06"
+        iyz="2.70761829788275E-21"
+        izz="3.98768050329819E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://JASZCZUR_10_07/meshes/RLndArmLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.92156862745098 0.92156862745098 0.92156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://JASZCZUR_10_07/meshes/RLndArmLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RLndArmJnt"
+    type="continuous">
+    <origin
+      xyz="-0.0621 0.0150500000000294 0.00514999999999813"
+      rpy="1.65099348915861 -1.57079631189374 -1.65101528723285" />
+    <parent
+      link="RLstArmLink" />
+    <child
+      link="RLndArmLink" />
+    <axis
+      xyz="0 -1 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="RRndServoLink">
+    <inertial>
+      <origin
+        xyz="0.00502207558923236 0.00980140817312039 0.00196275743749004"
+        rpy="0 0 0" />
+      <mass
+        value="0.0089821593830116" />
+      <inertia
+        ixx="3.74381833688478E-07"
+        ixy="4.03840801382856E-10"
+        ixz="-1.31121128506431E-07"
+        iyy="5.02863359642084E-07"
+        iyz="3.24811414167132E-11"
+        izz="3.05060716261189E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://JASZCZUR_10_07/meshes/RRndServoLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://JASZCZUR_10_07/meshes/RRndServoLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RRndServoJnt"
+    type="continuous">
+    <origin
+      xyz="0.0615 -0.008 -0.016"
+      rpy="3.1416 0 0" />
+    <parent
+      link="MainBoard" />
+    <child
+      link="RRndServoLink" />
+    <axis
+      xyz="0 -1 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="RRstArmLink">
+    <inertial>
+      <origin
+        xyz="-0.0500875871855856 0.00194912579792408 0.000253934432809969"
+        rpy="0 0 0" />
+      <mass
+        value="0.010727911847315" />
+      <inertia
+        ixx="4.12846705724035E-07"
+        ixy="-3.43052945421761E-12"
+        ixz="7.44951429518066E-12"
+        iyy="1.46713624995875E-06"
+        iyz="-9.74334438824114E-09"
+        izz="1.19624826536474E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://JASZCZUR_10_07/meshes/RRstArmLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.92156862745098 0.92156862745098 0.92156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://JASZCZUR_10_07/meshes/RRstArmLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RRstArmJnt"
+    type="continuous">
+    <origin
+      xyz="0.012199 0.01165 -0.010432"
+      rpy="-1.5708 0.87266 3.1416" />
+    <parent
+      link="RRndServoLink" />
+    <child
+      link="RRstArmLink" />
+    <axis
+      xyz="0 -1 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="RRndArmLink">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 0.00399999999999998 0.0271089217366484"
+        rpy="0 0 0" />
+      <mass
+        value="0.00368292036732051" />
+      <inertia
+        ixx="1.06068205884601E-06"
+        ixy="-5.19572822259871E-24"
+        ixz="1.09164737960985E-21"
+        iyy="1.0612743799609E-06"
+        iyz="-1.82905961988466E-23"
+        izz="3.987680503298E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://JASZCZUR_10_07/meshes/RRndArmLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.92156862745098 0.92156862745098 0.92156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://JASZCZUR_10_07/meshes/RRndArmLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RRndArmJnt"
+    type="continuous">
+    <origin
+      xyz="-0.0621 0.01505 0.00515"
+      rpy="-1.3846 -1.5708 1.3846" />
+    <parent
+      link="RRstArmLink" />
+    <child
+      link="RRndArmLink" />
+    <axis
+      xyz="0 -1 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  !-- Transmissions todo: rename-->
+
+    <!-- front right leg -->
+    <transmission name="tran_fr_leg_1">
+      <type>transmission_interface/SimpleTransmission</type>
+      <actuator name="ac_fr_leg_1">
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+      <joint name="FRplateJnt">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+      </joint>
+    </transmission>
+
+    <transmission name="tran_fr_leg_2">
+      <type>transmission_interface/SimpleTransmission</type>
+      <actuator name="ac_fr_leg_2">
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+      <joint name="FRstArmJnt">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+      </joint>
+    </transmission>
+
+    <transmission name="tran_fr_leg_3">
+      <type>transmission_interface/SimpleTransmission</type>
+      <actuator name="ac_fr_leg_3">
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+      <joint name="FRndArmJnt">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+      </joint>
+    </transmission>
+
+    <!-- front left leg -->
+    <transmission name="tran_fl_leg_1">
+      <type>transmission_interface/SimpleTransmission</type>
+      <actuator name="ac_fl_leg_1">
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+      <joint name="FLplateJnt">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+      </joint>
+    </transmission>
+
+    <transmission name="tran_fl_leg_2">
+      <type>transmission_interface/SimpleTransmission</type>
+      <actuator name="ac_fl_leg_2">
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+      <joint name="FLstArmJnt">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+      </joint>
+    </transmission>
+
+    <transmission name="tran_fl_leg_3">
+      <type>transmission_interface/SimpleTransmission</type>
+      <actuator name="ac_fl_leg_3">
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+      <joint name="FLndArmJnt">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+      </joint>
+    </transmission>
+
+    <!-- rear right leg -->
+    <transmission name="tran_rr_leg_1">
+      <type>transmission_interface/SimpleTransmission</type>
+      <actuator name="ac_rr_leg_1">
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+      <joint name="RRplateJnt">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+      </joint>
+    </transmission>
+
+    <transmission name="tran_rr_leg_2">
+      <type>transmission_interface/SimpleTransmission</type>
+      <actuator name="ac_rr_leg_2">
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+      <joint name="RRstArmJnt">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+      </joint>
+    </transmission>
+
+    <transmission name="tran_rr_leg_3">
+      <type>transmission_interface/SimpleTransmission</type>
+      <actuator name="ac_rr_leg_3">
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+      <joint name="RRndArmJnt">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+      </joint>
+    </transmission>
+
+    <!-- rear left leg -->
+    <transmission name="tran_rl_leg_1">
+      <type>transmission_interface/SimpleTransmission</type>
+      <actuator name="ac_rl_leg_1">
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+      <joint name="RLplateJnt">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+      </joint>
+    </transmission>
+
+    <transmission name="tran_rl_leg_2">
+      <type>transmission_interface/SimpleTransmission</type>
+      <actuator name="ac_rl_leg_2">
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+      <joint name="RLstArmJnt">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+      </joint>
+    </transmission>
+
+    <transmission name="tran_rl_leg_3">
+      <type>transmission_interface/SimpleTransmission</type>
+      <actuator name="ac_rl_leg_3">
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+      <joint name="RLndArmJnt">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+      </joint>
+    </transmission>
+
+  <!-- Gazebo plugins -->
+    <gazebo>
+      <static>false</static>
+      <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+        <robotNamespace>/</robotNamespace>
+        <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+        <legacyModeNS>true</legacyModeNS>
+      </plugin>
+    </gazebo>
+</robot>
