@@ -1,0 +1,6 @@
+type: "position_controllers/JointGroupPositionController"
+joints:
+ - RLndServoJnt
+ - RLstArmJnt
+ - RLndArmJnt
+pid: {p: 3.0, i: 1.0, d: 0.05}
