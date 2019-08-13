@@ -1,0 +1,1537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com)
+     Commit Version: 1.5.0-0-g9aa0fdb  Build Version: 1.5.7004.21443
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="barabasz">
+  <link
+    name="MainBoard">
+    <inertial>
+      <origin
+        xyz="0.0320000193093406 0.0395027228531644 -0.00887228498062729"
+        rpy="0 0 0" />
+      <mass
+        value="0.129368445580365" />
+      <inertia
+        ixx="8.48084091172867E-05"
+        ixy="2.80190057159981E-15"
+        ixz="2.02445045214041E-15"
+        iyy="3.18110038223727E-05"
+        iyz="-1.94866910333067E-08"
+        izz="0.000114276211084326" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/MainBoard.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.92156862745098 0.92156862745098 0.92156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/MainBoard.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="FRndServoLink">
+    <inertial>
+      <origin
+        xyz="0.0098016864311756 0.00502207567819904 0.00196275724149369"
+        rpy="0 0 0" />
+      <mass
+        value="0.00898215960028815" />
+      <inertia
+        ixx="5.02863363005504E-07"
+        ixy="4.18675844396454E-10"
+        ixz="3.94830240933682E-11"
+        iyy="3.74381841474543E-07"
+        iyz="-1.3112112929385E-07"
+        izz="3.05060721261306E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/FRndServoLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/FRndServoLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRndServoJnt"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="MainBoard" />
+    <child
+      link="FRndServoLink" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-90"
+      upper="90"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="FRstArmLink">
+    <inertial>
+      <origin
+        xyz="-0.0500875871883696 0.00194912580005271 0.000253934434247732"
+        rpy="0 0 0" />
+      <mass
+        value="0.0107279118497702" />
+      <inertia
+        ixx="4.12846705839608E-07"
+        ixy="-3.43052828463929E-12"
+        ixz="7.44951237431332E-12"
+        iyy="1.46713625008234E-06"
+        iyz="-9.7433444226041E-09"
+        izz="1.19624826540066E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/FRstArmLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.92156862745098 0.92156862745098 0.92156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/FRstArmLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRstArmJnt"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="FRndServoLink" />
+    <child
+      link="FRstArmLink" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-90"
+      upper="90"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="FRndArmLink">
+    <inertial>
+      <origin
+        xyz="1.66533453693773E-16 0.00400000000000231 0.0271089217366474"
+        rpy="0 0 0" />
+      <mass
+        value="0.0036829203673205" />
+      <inertia
+        ixx="1.06068205884601E-06"
+        ixy="-2.61337374778472E-23"
+        ixz="-3.15677567247594E-21"
+        iyy="1.0612743799609E-06"
+        iyz="-9.69952264274263E-23"
+        izz="3.98768050329808E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/FRndArmLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.92156862745098 0.92156862745098 0.92156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/FRndArmLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRndArmJnt"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="FRstArmLink" />
+    <child
+      link="FRndArmLink" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-90"
+      upper="90"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="FLndServoLink">
+    <inertial>
+      <origin
+        xyz="0.00502207561036433 0.0098014081989965 0.00196275721417633"
+        rpy="0 0 0" />
+      <mass
+        value="0.00898215956181228" />
+      <inertia
+        ixx="3.74381842823677E-07"
+        ixy="4.03840416342418E-10"
+        ixz="-1.31121133113021E-07"
+        iyy="5.02863370888215E-07"
+        iyz="3.24804200573631E-11"
+        izz="3.05060719170781E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/FLndServoLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.949019607843137 0.909803921568627 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/FLndServoLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLndServoJnt"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="MainBoard" />
+    <child
+      link="FLndServoLink" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-90"
+      upper="90"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="FLstArmLink">
+    <inertial>
+      <origin
+        xyz="-0.0500875873876524 0.00194912593459625 0.000253934562126246"
+        rpy="0 0 0" />
+      <mass
+        value="0.0107279120183282" />
+      <inertia
+        ixx="4.1284671726827E-07"
+        ixy="-3.43025266266729E-12"
+        ixz="7.45044411557124E-12"
+        iyy="1.46713626063975E-06"
+        iyz="-9.74334754935356E-09"
+        izz="1.19624826644716E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/FLstArmLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.92156862745098 0.92156862745098 0.92156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/FLstArmLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLstArmJnt"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="FLndServoLink" />
+    <child
+      link="FLstArmLink" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-90"
+      upper="90"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="FLndArmLink">
+    <inertial>
+      <origin
+        xyz="1.77635683940025E-15 0.00400000000000253 0.0271089217366467"
+        rpy="0 0 0" />
+      <mass
+        value="0.00368292036732051" />
+      <inertia
+        ixx="1.06068205884601E-06"
+        ixy="-1.47341546611008E-23"
+        ixz="-2.75832422543757E-22"
+        iyy="1.06127437996091E-06"
+        iyz="1.85708348209369E-21"
+        izz="3.98768050329815E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/FLndArmLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.92156862745098 0.92156862745098 0.92156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/FLndArmLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLndArmJnt"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="FLstArmLink" />
+    <child
+      link="FLndArmLink" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-90"
+      upper="90"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="RLndServoLink">
+    <inertial>
+      <origin
+        xyz="0.00502207559527033 0.00980168628786889 -0.00196275742307396"
+        rpy="0 0 0" />
+      <mass
+        value="0.00898215939878838" />
+      <inertia
+        ixx="3.74381834266887E-07"
+        ixy="4.18674984067614E-10"
+        ixz="1.31121128597758E-07"
+        iyy="5.02863359943406E-07"
+        iyz="-3.94795548611325E-11"
+        izz="3.05060716625873E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/RLndServoLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.949019607843137 0.909803921568627 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/RLndServoLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RLndServoJnt"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="MainBoard" />
+    <child
+      link="RLndServoLink" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-90"
+      upper="90"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="RLstArmLink">
+    <inertial>
+      <origin
+        xyz="-0.0500875871864415 0.00194912579904715 0.00025393443359199"
+        rpy="0 0 0" />
+      <mass
+        value="0.0107279118486511" />
+      <inertia
+        ixx="4.12846705783004E-07"
+        ixy="-3.43054560284723E-12"
+        ixz="7.44948705378678E-12"
+        iyy="1.46713625002562E-06"
+        iyz="-9.74334440777068E-09"
+        izz="1.19624826538892E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/RLstArmLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.92156862745098 0.92156862745098 0.92156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/RLstArmLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RLstArmJnt"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="RLndServoLink" />
+    <child
+      link="RLstArmLink" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-90"
+      upper="90"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="RLndArmLink">
+    <inertial>
+      <origin
+        xyz="-6.07153216591882E-16 0.00400000000000033 0.027108921736649"
+        rpy="0 0 0" />
+      <mass
+        value="0.00368292036732051" />
+      <inertia
+        ixx="1.06068205884601E-06"
+        ixy="-8.73709522009135E-24"
+        ixz="-4.73809701105228E-22"
+        iyy="1.0612743799609E-06"
+        iyz="2.86809130555803E-21"
+        izz="3.98768050329813E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/RLndArmLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.92156862745098 0.92156862745098 0.92156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/RLndArmLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RLndArmJnt"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="RLstArmLink" />
+    <child
+      link="RLndArmLink" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-90"
+      upper="90"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="RRndServoLink">
+    <inertial>
+      <origin
+        xyz="0.00502207563561259 0.0098014082543094 0.00196275732204219"
+        rpy="0 0 0" />
+      <mass
+        value="0.00898215950593245" />
+      <inertia
+        ixx="3.74381838430846E-07"
+        ixy="4.03841544870431E-10"
+        ixz="-1.31121129092361E-07"
+        iyy="5.02863361856574E-07"
+        iyz="3.24833698928373E-11"
+        izz="3.05060719194867E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/RRndServoLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/RRndServoLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RRndServoJnt"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="MainBoard" />
+    <child
+      link="RRndServoLink" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-90"
+      upper="90"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="RRstArmLink">
+    <inertial>
+      <origin
+        xyz="-0.0500875871874151 0.00194912579927123 0.000253934434254439"
+        rpy="0 0 0" />
+      <mass
+        value="0.0107279118489898" />
+      <inertia
+        ixx="4.12846705857771E-07"
+        ixy="-3.43053046219455E-12"
+        ixz="7.44951233072175E-12"
+        iyy="1.46713625007563E-06"
+        iyz="-9.74334442457229E-09"
+        izz="1.19624826536787E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/RRstArmLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.92156862745098 0.92156862745098 0.92156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/RRstArmLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RRstArmJnt"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="RRndServoLink" />
+    <child
+      link="RRstArmLink" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-90"
+      upper="90"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="RRndArmLink">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 0.00400000000000003 0.0271089217366482"
+        rpy="0 0 0" />
+      <mass
+        value="0.00368292036732051" />
+      <inertia
+        ixx="1.06068205884601E-06"
+        ixy="-4.75628852217991E-24"
+        ixz="1.08545321853851E-21"
+        iyy="1.0612743799609E-06"
+        iyz="-5.49341371253738E-22"
+        izz="3.98768050329812E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/RRndArmLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.92156862745098 0.92156862745098 0.92156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/RRndArmLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RRndArmJnt"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="RRstArmLink" />
+    <child
+      link="RRndArmLink" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-90"
+      upper="90"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="HEADndServoLink">
+    <inertial>
+      <origin
+        xyz="0.00817073714990585 -0.00971625048268563 0.00145467704025708"
+        rpy="0 0 0" />
+      <mass
+        value="0.0121934444913325" />
+      <inertia
+        ixx="4.23955061841118E-07"
+        ixy="-9.10853312043913E-08"
+        ixz="-1.63814882462324E-08"
+        iyy="1.2199527611556E-06"
+        iyz="-8.11641297651328E-09"
+        izz="1.31199138818332E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/HEADndServoLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/HEADndServoLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="HEADndServoJnt"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="MainBoard" />
+    <child
+      link="HEADndServoLink" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-90"
+      upper="90"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="HEADstArmLink">
+    <inertial>
+      <origin
+        xyz="-0.0251265028854895 0.013480592660757 0.0145067918138991"
+        rpy="0 0 0" />
+      <mass
+        value="0.00788385789613033" />
+      <inertia
+        ixx="2.36782866238395E-06"
+        ixy="-8.51226692416808E-08"
+        ixz="1.30397572984443E-06"
+        iyy="3.12428228891571E-06"
+        iyz="4.91456350401789E-08"
+        izz="3.87353002601518E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/HEADstArmLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/HEADstArmLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="HEADstArmJnt"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="HEADndServoLink" />
+    <child
+      link="HEADstArmLink" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-90"
+      upper="90"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="HEADLink">
+    <inertial>
+      <origin
+        xyz="0.0554988766394613 0.00799999970901315 -0.00147454938363152"
+        rpy="0 0 0" />
+      <mass
+        value="0.0177300364754162" />
+      <inertia
+        ixx="4.41581214683472E-06"
+        ixy="-1.54454845110966E-12"
+        ixz="2.20726693817977E-06"
+        iyy="7.03739587968143E-06"
+        iyz="4.16679611799208E-13"
+        izz="8.27777171343773E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/HEADLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/HEADLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="HEADJnt"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="HEADstArmLink" />
+    <child
+      link="HEADLink" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-90"
+      upper="90"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="HEADstArmParallelLink">
+    <inertial>
+      <origin
+        xyz="-0.0122501451765017 0.00455000000000487 0.035245741804803"
+        rpy="0 0 0" />
+      <mass
+        value="0.00373003311748238" />
+      <inertia
+        ixx="1.76654564691896E-06"
+        ixy="1.02089597225529E-21"
+        ixz="8.1677668885244E-07"
+        iyy="1.9009569588329E-06"
+        iyz="-1.64562412988596E-21"
+        izz="8.23435633498772E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/HEADstArmParallelLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/HEADstArmParallelLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="HEADstArmParallelLJnt"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="HEADndServoLink" />
+    <child
+      link="HEADstArmParallelLink" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-90"
+      upper="90"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="HEADParallelLink">
+    <inertial>
+      <origin
+        xyz="-0.0134202070650145 -0.00023110163398038 0.0126004276917603"
+        rpy="0 0 0" />
+      <mass
+        value="0.0177300364754162" />
+      <inertia
+        ixx="7.8539051231723E-06"
+        ixy="2.50107486289452E-06"
+        ixz="-2.71927351959353E-07"
+        iyy="4.86526699259685E-06"
+        iyz="2.35756479588157E-07"
+        izz="7.01180762418472E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/HEADParallelLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/HEADParallelLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="HEADParallelJnt"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="HEADstArmParallelLink" />
+    <child
+      link="HEADParallelLink" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-90"
+      upper="90"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="TailndServoLink">
+    <inertial>
+      <origin
+        xyz="-0.0048574414776266 -0.0161888669112015 0.00107673629300598"
+        rpy="0 0 0" />
+      <mass
+        value="0.0151391203827047" />
+      <inertia
+        ixx="7.7721318874226E-07"
+        ixy="-7.03495523708996E-09"
+        ixz="1.32669798403111E-08"
+        iyy="1.48477068102486E-06"
+        iyz="3.80435662351854E-08"
+        izz="1.87604788829166E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/TailndServoLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/TailndServoLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="TailndServoJnt"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="MainBoard" />
+    <child
+      link="TailndServoLink" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-90"
+      upper="90"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="TAILstArmLink">
+    <inertial>
+      <origin
+        xyz="0.00543848267787118 0.0182547316012027 0.0424256187265556"
+        rpy="0 0 0" />
+      <mass
+        value="0.0132846631864033" />
+      <inertia
+        ixx="1.50674585466447E-05"
+        ixy="-1.63523642523639E-10"
+        ixz="1.97822495424931E-07"
+        iyy="1.93171005318235E-05"
+        iyz="1.22759944593701E-08"
+        izz="4.46322191208121E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/TAILstArmLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.92156862745098 0.92156862745098 0.92156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/TAILstArmLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="TAILstArmJnt"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="TailndServoLink" />
+    <child
+      link="TAILstArmLink" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-90"
+      upper="90"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="TAILLink">
+    <inertial>
+      <origin
+        xyz="0.0693819489154556 0.00236468450873411 0.0174996318739005"
+        rpy="0 0 0" />
+      <mass
+        value="0.0170255571844121" />
+      <inertia
+        ixx="1.10748675129764E-06"
+        ixy="5.92827428438699E-07"
+        ixz="2.6867305894356E-10"
+        iyy="9.48088608953699E-06"
+        iyz="-2.33873685031626E-12"
+        izz="9.05157957329576E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/TAILLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/TAILLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="TAILJnt"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="TAILstArmLink" />
+    <child
+      link="TAILLink" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-90"
+      upper="90"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="TAILstArmParallelLink">
+    <inertial>
+      <origin
+        xyz="0.00570000000000003 -0.04815 0.00754999999999956"
+        rpy="0 0 0" />
+      <mass
+        value="0.0110994579255875" />
+      <inertia
+        ixx="1.38627444069151E-05"
+        ixy="2.63063481881553E-21"
+        ixz="-4.78081631772327E-22"
+        iyy="1.63407638509854E-06"
+        iyz="-3.0736480598822E-21"
+        izz="1.23476561550545E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/TAILstArmParallelLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/TAILstArmParallelLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="TAILstArmParallelJnt"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="TailndServoLink" />
+    <child
+      link="TAILstArmParallelLink" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-90"
+      upper="90"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="TAILParallelLink">
+    <inertial>
+      <origin
+        xyz="0.0638799444695541 -0.0101139262583112 0.00999963187390017"
+        rpy="0 0 0" />
+      <mass
+        value="0.0170255571844121" />
+      <inertia
+        ixx="1.10651259072902E-06"
+        ixy="5.85906456236652E-07"
+        ixz="2.68674900034566E-10"
+        iyy="9.48186025010561E-06"
+        iyz="-2.11669219326754E-12"
+        izz="9.05157957329576E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/TAILParallelLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lizardv4_description/meshes/TAILParallelLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="TAILParallelJnt"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="TAILstArmParallelLink" />
+    <child
+      link="TAILParallelLink" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-90"
+      upper="90"
+      effort="0"
+      velocity="0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+
+  <!-- ################### TRANSMISSION Definitions ############################# -->
+  <!-- ################### TRANSMISSION Definitions ############################# -->
+
+  <!-- front right leg -->
+  <transmission name="transmission_front_right_leg_1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="servo_front_right_leg_1">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+    <joint name="FRndServoJnt">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <transmission name="transmission_front_right_leg_2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="servo_front_right_leg_2">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+    <joint name="FRstArmJnt">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <transmission name="transmission_front_right_leg_3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="servo_front_right_leg_3">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+    <joint name="FRndArmJnt">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <!-- front left leg -->
+  <transmission name="transmission_front_left_leg_1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="servo_front_left_leg_1">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+    <joint name="FLndServoJnt">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <transmission name="transmission_front_left_leg_2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="servo_front_left_leg_2">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+    <joint name="FLstArmJnt">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <transmission name="transmission_front_left_leg_3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="servo_front_left_leg_3">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+    <joint name="FLndArmJnt">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <!-- rear right leg -->
+  <transmission name="transmission_rear_right_leg_1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="servo_rear_right_leg_1">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+    <joint name="RRndServoJnt">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <transmission name="transmission_rear_right_leg_2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="servo_rear_right_leg_2">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+    <joint name="RRstArmJnt">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <transmission name="transmission_rear_right_leg_3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="servo_rear_right_leg_3">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+    <joint name="RRndArmJnt">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <!-- rear left leg -->
+  <transmission name="transmission_rear_left_leg_1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="servo_rear_left_leg_1">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+    <joint name="RLndServoJnt">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <transmission name="transmission_rear_left_leg_2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="servo_rear_left_leg_2">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+    <joint name="RLstArmJnt">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <transmission name="transmission_rear_left_leg_3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="servo_rear_left_leg_3">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+    <joint name="RLndArmJnt">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <!-- ################### MATERIALS Definitions ############################# -->
+  <!-- ################### MATERIALS Definitions ############################# -->
+
+  <!-- ################### SENSOR Definitions ############################# -->
+  <!-- ################### SENSOR Definitions ############################# -->
+  <!--
+  <gazebo>
+    <plugin filename="libgazebo_ros_imu.so" name="gazebo_ros_imu_controller">
+      <robotNamespace>/barabasz</robotNamespace>
+      <topicName>imu/data</topicName>
+      <serviceName>imu/service</serviceName>
+      <bodyName>MainBoard</bodyName>
+      <gaussianNoise>0</gaussianNoise>
+      <rpyOffsets>0 0 0</rpyOffsets>
+      <updateRate>10.0</updateRate>
+      <alwaysOn>true</alwaysOn>
+      <gaussianNoise>0</gaussianNoise>
+    </plugin>
+  </gazebo>
+-->
+
+  <!-- ################### GAZEBO PLUGINS Definitions ############################# -->
+  <!-- ################### GAZEBO PLUGINS Definitions ############################# -->
+  <gazebo>
+      <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
+        <robotNamespace>/barabasz</robotNamespace>
+      </plugin>
+  </gazebo>
+
+
+</robot>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--spawns the URDF file into the given point in space, -->
+<launch>
+   <include file="$(find lizardv4_description)/launch/spawn_urdf.launch">
+       <arg name="x" value="0.0"/>
+       <arg name="y" value="0.0"/>
+       <arg name="z" value="0.2"/>
+       <arg name="urdf_robot_file" value="$(find lizardv4_description)/urdf/JASZCZUR_31_07.urdf"/>
+       <arg name="robot_name" value="barabasz"/>
+   </include>
+</launch>

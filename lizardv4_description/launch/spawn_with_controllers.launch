@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <include file="$(find lizardv4_description)/launch/world_launch.launch"/>
+    <include file="$(find lizardv4_description)/launch/spawn_lizard.launch"/>
+    <include file="$(find lizardv4_description)/launch/lizard_control.launch"/>
+</launch>
