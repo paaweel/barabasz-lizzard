@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <include
+    file="$(find gazebo_ros)/launch/empty_world.launch" />
+  <param
+    name="robot_description"
+    command="cat $(find lizardv2_description)/urdf/lizardv2_description.urdf" />
+
+  <node
+    name="tf_footprint_base"
+    pkg="tf"
+    type="static_transform_publisher"
+    args="0 0 0 0 0 0 base_link base_footprint 40" />
+  <node
+    name="spawn_model"
+    pkg="gazebo_ros"
+    type="spawn_model"
+    args="-file $(find lizardv2_description)/urdf/lizardv2_description.urdf -urdf -model lizardv2_description"
+    output="screen" />
+  <node
+    name="fake_joint_calibration"
+    pkg="rostopic"
+    type="rostopic"
+    args="pub /calibrated std_msgs/Bool true" />
+
+  <rosparam
+    file="$(find lizardv2_description)/config/gazebo_ros_control.yaml"
+    command="load"/>
+
+  <node
+    pkg="robot_state_publisher"
+    type="robot_state_publisher"
+    name="robot_state_publisher">
+    <param
+      name="publish_frequency"
+      type="double"
+      value="30.0" />
+  </node>
+
+  <rosparam command="load"
+            file="$(find lizardv2_description)/config/gazebo_ros_control.yaml"
+            ns="gazebo_ros_cotrol/" />
+  <node
+    name="controller_spawner"
+    pkg="controller_manager"
+    type="spawner"
+    respawn="false"
+    output="screen"
+    args="joint_state_controller
+          FLndServoJnt_controller
+          FLstArmJnt_controller
+          FLndArmJnt_controller
+          FRndServoJnt_controller
+          FRstArmJnt_controller
+          FRndArmJnt_controller
+          RLndServoJnt_controller
+          RLstArmJnt_controller
+          RLndArmJnt_controller
+          RRndServoJnt_controller
+          RRstArmJnt_controller
+          RRndArmJnt_controller
+          --shutdown-timeout 3">
+  </node>
+
+</launch>

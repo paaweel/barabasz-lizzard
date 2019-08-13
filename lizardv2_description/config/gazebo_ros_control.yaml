@@ -1,0 +1,63 @@
+joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+FLndServoJnt_controller:
+  type: "effort_controllers/JointPositionController"
+  joint: FLndServoJnt
+  pid: {p: 3.0, i: 1.0, d: 0.05}
+
+FLstArmJnt_controller:
+  type: "effort_controllers/JointPositionController"
+  joint: FLstArmJnt
+  pid: {p: 3.0, i: 1.0, d: 0.05}
+
+FLndArmJnt_controller:
+  type: "effort_controllers/JointPositionController"
+  joint: FLndArmJnt
+  pid: {p: 3.0, i: 1.0, d: 0.05}
+
+FRndServoJnt_controller:
+  type: "effort_controllers/JointPositionController"
+  joint: FRndServoJnt
+  pid: {p: 3.0, i: 1.0, d: 0.05}
+
+FRstArmJnt_controller:
+  type: "effort_controllers/JointPositionController"
+  joint: FRstArmJnt
+  pid: {p: 3.0, i: 1.0, d: 0.05}
+
+FRndArmJnt_controller:
+  type: "effort_controllers/JointPositionController"
+  joint: FRndArmJnt
+  pid: {p: 3.0, i: 1.0, d: 0.05}
+
+RLndServoJnt_controller:
+  type: "effort_controllers/JointPositionController"
+  joint: RLndServoJnt
+  pid: {p: 3.0, i: 1.0, d: 0.05}
+
+RLstArmJnt_controller:
+  type: "effort_controllers/JointPositionController"
+  joint: RLstArmJnt
+  pid: {p: 3.0, i: 1.0, d: 0.05}
+
+RLndArmJnt_controller:
+  type: "effort_controllers/JointPositionController"
+  joint: RLndArmJnt
+  pid: {p: 3.0, i: 1.0, d: 0.05}
+
+RRndServoJnt_controller:
+  type: "effort_controllers/JointPositionController"
+  joint: RRndServoJnt
+  pid: {p: 3.0, i: 1.0, d: 0.05}
+
+RRstArmJnt_controller:
+  type: "effort_controllers/JointPositionController"
+  joint: RRstArmJnt
+  pid: {p: 3.0, i: 1.0, d: 0.05}
+
+RRndArmJnt_controller:
+  type: "effort_controllers/JointPositionController"
+  joint: RRndArmJnt
+  pid: {p: 3.0, i: 1.0, d: 0.05}

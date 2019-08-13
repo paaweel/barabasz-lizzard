@@ -1,0 +1,15 @@
+
+
+gazebo_ros_control/pid_gains:
+   FLndServoJnt:  {p: 3.0, i: 1.0, d: 0.05}
+   FLstArmJnt:    {p: 3.0, i: 1.0, d: 0.05}
+   FLndArmJnt:    {p: 3.0, i: 1.0, d: 0.05}
+   FRndServoJnt:  {p: 3.0, i: 1.0, d: 0.05}
+   FRstArmJnt:    {p: 3.0, i: 1.0, d: 0.05}
+   FRndArmJnt:    {p: 3.0, i: 1.0, d: 0.05}
+   RLndServoJnt:  {p: 3.0, i: 1.0, d: 0.05}
+   RLstArmJnt:    {p: 3.0, i: 1.0, d: 0.05}
+   RLndArmJnt:    {p: 3.0, i: 1.0, d: 0.05}
+   RRndServoJnt:  {p: 3.0, i: 1.0, d: 0.05}
+   RRstArmJnt:    {p: 3.0, i: 1.0, d: 0.05}
+   RRndArmJnt:    {p: 3.0, i: 1.0, d: 0.05}

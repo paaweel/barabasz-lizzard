@@ -704,7 +704,7 @@
     <safety_controller
       k_velocity="0" />
   </joint>
-  !-- Transmissions todo: rename-->
+  <!-- Transmissions todo: rename-->
 
     <!-- front right leg -->
     <transmission name="tran_fr_leg_1">
@@ -831,6 +831,11 @@
     </transmission>
 
   <!-- Gazebo plugins -->
+
+
+
+
+
     <gazebo>
       <static>false</static>
       <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
